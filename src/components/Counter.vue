@@ -1,13 +1,16 @@
 <template>
     <div class="counter">
-        Counter : {{ number }}
+        <h3>Counter : {{ number }}</h3>
+        
         <div>
             <label for="counter" v-bind:title="number">Counter: </label>
             <input type="text" v-model="number">
-            <button v-on:click="increase">+</button>
-            <button v-on:click="decrease">-</button>
-            <button v-on:click="increase10">+10</button>
-            <button v-on:click="multiply">*2</button>
+            
+            <button class="btn" v-on:click="increase">+</button>
+            <button class="btn" v-on:click="decrease">-</button>
+            <button class="btn" v-on:click="increase10">+10</button>
+            <button class="btn" v-on:click="multiply">X2</button>
+            
 
         </div>
         
@@ -43,6 +46,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+    
+    .btn {
+        background-color: black;
+        color: white;
+        width: 32px;
+        border-radius: 4px;
+        border: 2px solid grey;
+        padding: 3px;
+        margin: 2px;
+        &:hover {
+            color: black;
+            background-color: white;
+        }
+    }
 </style>>
 
